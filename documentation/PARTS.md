@@ -27,7 +27,7 @@ Here is the list of required components. Prices and availability may vary.
 | 20 | 349,95€ | [Voelkner](https://www.voelkner.de/products/1412939/MEAN-WELL-CSP-3000-400-Schaltnetzteil-400-V-DC-7.5A-3000W.html) | **MEAN WELL CSP-3000-400 Schaltnetzteil 400V DC 3000W** |
 
 ## Optionale Teile für Externe Regelung / Optional Parts for External Control
-Laut PDF "Notstrom Zusammenfassung" kann die Regelung präziser mit folgenden Teilen gebaut werden:
+Die Regelung kann auch mit folgenden Teilen gebaut werden:
 According to the PDF, a more precise control can be built with:
 *   **DC/DC Spannungswandler** (12V -> 10V): z.B. DEBO DCDC UP 3 (Reichelt).
 *   **Potentiometer**: 10K Regler (z.B. LA42DWQ-22 22mm bei Amazon).
@@ -40,3 +40,4 @@ STLs are located in the project folder:
 *   `Solar-Box-CEE-Stecker_v3.stl`
 *   `Solar-Box-Solar.Stecker_V2.stl`
 *   `DIN_RAIL_Mount_lying.stl`
+
