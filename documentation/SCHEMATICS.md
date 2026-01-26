@@ -11,7 +11,16 @@
 
 ## 📊 Systemübersicht / System Overview
 
-### Blockschaltbild / Block Diagram
+### Visuelles Blockschaltbild / Visual Block Diagram
+
+<div align="center">
+
+![System Overview](images/system-overview.svg)
+
+</div>
+
+<details>
+<summary>🔍 Mermaid Diagramm anzeigen / Show Mermaid Diagram</summary>
 
 ```mermaid
 graph LR
@@ -38,7 +47,6 @@ graph LR
 
     Poti[🎛️ Potentiometer] -.->|CN2| MW
 
-    %% Styles für bessere Lesbarkeit
     style Gen fill:#fff,stroke:#ff9800,stroke-width:2px,color:#000
     style MW fill:#fff,stroke:#2196f3,stroke-width:2px,color:#000
     style Diode fill:#fff,stroke:#f44336,stroke-width:2px,color:#000
@@ -47,47 +55,154 @@ graph LR
     style RCBO fill:#fff,stroke:#607d8b,stroke-width:2px,color:#000
 ```
 
+</details>
+
+### Signalfluss / Signal Flow
+
+| Phase | Komponente | Spannung | Beschreibung |
+|-------|------------|----------|--------------|
+| 1️⃣ | Generator | 230V AC | Stromquelle |
+| 2️⃣ | CEE → RCBO | 230V AC | Schutz & Eingang |
+| 3️⃣ | MeanWell PSU | AC→DC | Wandlung auf 350-400V DC |
+| 4️⃣ | DC Kette | 350-400V DC | Schutz & Monitoring |
+| 5️⃣ | MC4 → MPPT | 350-400V DC | Ausgang zum Wechselrichter |
+
 ---
 
 ## ⚡ Vollständiger Schaltplan / Detailed Wiring
 
-### Reihenfolge der DC-Komponenten (Plus-Pol)
+### Visueller Verdrahtungsplan / Visual Wiring Diagram
 
-1. **MeanWell CSP-3000-400 (+V)**
-2. **Sperrdiode (MDK-55)** - Verhindert Rückstrom vom PV-System.
-3. **Voltmeter** - Anzeige der aktuellen Ausgangsspannung.
-4. **Amperemeter** - Anzeige des Ladestroms (bis 7.5A).
-5. **DC Sicherung (10A)** - Schutz vor Überlast/Kurzschluss.
-6. **MC4 Ausgangsbuchse (+)**
+<div align="center">
 
-*Der Minus-Pol (-V) wird direkt vom Netzteil zur MC4-Buchse (-) geführt.*
+![Detailed Wiring Diagram](images/detailed-wiring.svg)
+
+</div>
+
+### Reihenfolge der DC-Komponenten (Plus-Pol) / DC Component Order (Positive Rail)
+
+Die korrekte Reihenfolge ist **kritisch** für die Sicherheit! / The correct order is **critical** for safety!
+
+| Nr. | Komponente | Spezifikation | Funktion |
+|-----|------------|---------------|----------|
+| 1️⃣ | **MeanWell CSP-3000-400 (+V)** | 400V DC, 7.5A | DC-Spannungsquelle |
+| 2️⃣ | **Sperrdiode (MDK-55)** | 55A 1600V | 🔴 Verhindert Rückstrom vom PV-System |
+| 3️⃣ | **Voltmeter** | 0-500V DC analog | Anzeige der Ausgangsspannung |
+| 4️⃣ | **Amperemeter** | 0-10A DC analog | Anzeige des Ladestroms |
+| 5️⃣ | **DC Sicherung** | 10A 500V DC | Überlast-/Kurzschlussschutz |
+| 6️⃣ | **MC4 Buchse (+)** | Solar-Standard | Ausgang zum Wechselrichter |
+
+### Minus-Pol (-V) / Negative Rail
+
+```
+MeanWell (-V) ─────────────────────────────────> MC4 Buchse (-)
+              │                                        │
+              └──────── Direkt / Direct ───────────────┘
+```
+
+*Der Minus-Pol wird direkt vom Netzteil zur MC4-Buchse geführt - keine Unterbrechung!*  
+*The negative rail goes directly from PSU to MC4 connector - no interruption!*
+
+### Verkabelungsspezifikationen / Wiring Specifications
+
+| Leitung | Querschnitt | Typ | Farbe |
+|---------|-------------|-----|-------|
+| DC Plus (+) | 6mm² | Solarkabel | 🔴 Rot/Red |
+| DC Minus (-) | 6mm² | Solarkabel | ⚫ Schwarz/Black |
+| Steuerung | 0.5-1mm² | Flexibel | 🟡 Gelb/Yellow |
+| AC Eingang | 2.5mm² | H07RN-F | Braun/Blau/Grün-Gelb |
 
 ---
 
-## 🎛️ Steuerung (CN2 Port)
+## 🎛️ Steuerung (CN2 Port) / Control (CN2 Port)
 
 Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN2 Port des MeanWell Netzteils angeschlossen wird.
 
-### MeanWell CN2 Pinbelegung
+### MeanWell CN2 Pinbelegung / Pin Assignment
 
-Bitte beachten Sie das offizielle Handbuch für die exakte Pinbelegung. Hier ist die schematische Darstellung für das Potentiometer:
+| Pin | Bezeichnung | Funktion | Verbindung |
+|-----|-------------|----------|------------|
+| **Pin 1** | +12V | Stromversorgung für Potentiometer | Modul (+) Eingang |
+| **Pin 2** | -12V (GND) | Masse für Potentiometer | Modul (-) Eingang |
+| **Pin 5** | V_ADJ | Steuerspannung 0-10V | Modul Signal Ausgang |
+| **Pin 6** | -V_ADJ | Signal Masse | Modul Signal (-) |
 
-- **Pin 8 (+12V AUX)**: Stromversorgung für das Potentiometer-Modul.
-- **Pin 6 (V_ADJ)**: Ausgang des Potentiometers (Steuerspannung 0-10V).
-- **Pin 1-5 (GND)**: Gemeinsame Masse.
+### Schaltschema / Wiring Schematic
 
-> 📷 <img width="1066" height="436" alt="grafik" src="https://github.com/user-attachments/assets/46e13910-a17f-4f5d-b26e-490be6be1b89" />
-https://www.meanwell.com/Upload/PDF/CSP-3000/CSP-3000-SPEC.PDF
+```
+┌─────────────────┐           ┌──────────────────┐
+│   MeanWell      │           │  Potentiometer   │
+│   CN2 Port      │           │     Modul        │
+│                 │           │                  │
+│  Pin 1 (+12V) ──┼───────────┼── (+) Eingang    │
+│                 │           │                  │
+│  Pin 2 (-12V) ──┼───────────┼── (-) Eingang    │
+│                 │           │                  │
+│  Pin 5 (V_ADJ)──┼───────────┼── Signal (+)     │
+│                 │           │                  │
+│  Pin 6 (-V_ADJ)─┼───────────┼── Signal (-)     │
+└─────────────────┘           └──────────────────┘
+```
+
+> 📷 **Offizielle Dokumentation / Official Documentation:**
 > 
+> <img width="1066" height="436" alt="MeanWell CN2 Pinout" src="https://github.com/user-attachments/assets/46e13910-a17f-4f5d-b26e-490be6be1b89" />
+> 
+> 📄 [MeanWell CSP-3000 Datenblatt / Datasheet (PDF)](https://www.meanwell.com/Upload/PDF/CSP-3000/CSP-3000-SPEC.PDF)
+
+### Spannungseinstellung / Voltage Adjustment
+
+| Poti-Stellung | Steuerspannung | Ausgangsspannung | Ladestrom (ca.) |
+|---------------|----------------|------------------|-----------------|
+| Minimum | 0V | ~320V DC | 0A |
+| Mitte | 5V | ~360V DC | ~4A |
+| Maximum | 10V | ~400V DC | 7.5A |
 
 ---
 
-## ⚠️ Sicherheitshinweise
+## ⚠️ Sicherheitshinweise / Safety Notes
 
-- **Sperrdiode**: Die Diode muss als erstes Bauteil nach dem Netzteil sitzen! Sie schützt das Netzteil vor den Spannungen der Solarpanele.
-- **Sicherung**: Der 10A DC-Automat dient als Lasttrennschalter und Absicherung.
-- **Analoge Anzeige**: Voltmeter und Amperemeter sind im Deckel der Alubox montiert für eine direkte Kontrolle ohne Zusatzgeräte.
+<div align="center">
+
+### ⚡ HOCHSPANNUNG - LEBENSGEFAHR / HIGH VOLTAGE - DANGER ⚡
+
+</div>
+
+### Kritische Punkte / Critical Points
+
+| Risiko | Maßnahme | Priorität |
+|--------|----------|-----------|
+| 🔴 **Sperrdiode** | MUSS als erstes Bauteil nach dem Netzteil sitzen! | ⚠️ KRITISCH |
+| 🔴 **Verpolung** | Alle Anschlüsse doppelt prüfen vor Inbetriebnahme | ⚠️ KRITISCH |
+| 🟠 **Lichtbogen** | Niemals unter Last stecken/trennen | WICHTIG |
+| 🟠 **Kurzschluss** | DC-Automat als Lasttrennschalter verwenden | WICHTIG |
+| 🟡 **Wärme** | Sperrdiode benötigt Kühlung (Metallgehäuse) | BEACHTEN |
+
+### Checkliste vor Inbetriebnahme / Pre-Operation Checklist
+
+- [ ] Alle Schraubverbindungen fest angezogen
+- [ ] Kabelquerschnitte entsprechen den Spezifikationen
+- [ ] Sperrdiode richtig gepolt (Kathode Richtung MC4)
+- [ ] Keine blanken Leitungen oder Kurzschlussgefahr
+- [ ] RCBO funktioniert (Testknopf drücken)
+- [ ] Voltmeter zeigt Spannung erst NACH Einschalten
+- [ ] Potentiometer auf Minimum vor dem Start
 
 ---
 
-**[◀ Zurück zur Aufbauanleitung](ASSEMBLY.md)** | **[Zurück zur Hauptseite](../README.md)**
+## 📸 Bildergalerie / Photo Gallery
+
+<details>
+<summary>🖼️ Interne Verdrahtung anzeigen / Show Internal Wiring</summary>
+
+| Beschreibung | Bild |
+|--------------|------|
+| Gesamtaufbau | ![Assembly](images/20260126_002311.jpg) |
+| DC-Verkabelung | ![DC Wiring](images/20260126_002315.jpg) |
+| Steuereinheit | ![Control](images/20260126_002328.jpg) |
+
+</details>
+
+---
+
+**[◀ Zurück zur Aufbauanleitung / Back to Assembly](ASSEMBLY.md)** | **[🏠 Zurück zur Hauptseite / Back to Main](../README.md)**
