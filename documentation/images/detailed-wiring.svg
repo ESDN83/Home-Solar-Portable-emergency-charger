@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="1000" height="650">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
   <defs>
     <filter id="boxShadow" x="-5%" y="-5%" width="110%" height="110%">
       <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.25"/>
@@ -9,11 +9,12 @@
     </marker>
   </defs>
   
-  <rect width="1000" height="650" fill="#fafafa"/>
+  <rect width="1000" height="700" fill="#fafafa"/>
   
   <text x="500" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#333">Vollstaendiger Schaltplan / Detailed Wiring Diagram</text>
   <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">DC-Komponenten Reihenfolge (Plus-Pol) / DC Component Order (Positive Rail)</text>
   
+  <!-- AC Input Section -->
   <rect x="20" y="75" width="180" height="200" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2" filter="url(#boxShadow)"/>
   <text x="110" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e65100">AC Eingang</text>
   
@@ -33,6 +34,7 @@
   <line x1="110" y1="170" x2="75" y2="185" stroke="#333" stroke-width="2"/>
   <line x1="100" y1="205" x2="110" y2="205" stroke="#333" stroke-width="2"/>
   
+  <!-- PSU Section -->
   <rect x="220" y="75" width="200" height="200" rx="10" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" filter="url(#boxShadow)"/>
   <text x="320" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">Netzteil / PSU</text>
   
@@ -56,116 +58,145 @@
   <line x1="170" y1="205" x2="255" y2="188" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="210" y="190" font-family="Arial, sans-serif" font-size="9" fill="#ff9800" font-weight="bold">AC</text>
   
-  <rect x="440" y="75" width="540" height="280" rx="10" fill="#fff" stroke="#4caf50" stroke-width="2" filter="url(#boxShadow)"/>
+  <!-- DC Output Chain -->
+  <rect x="440" y="75" width="540" height="300" rx="10" fill="#fff" stroke="#4caf50" stroke-width="2" filter="url(#boxShadow)"/>
   <text x="710" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#388e3c">DC Ausgangskette (Plus-Pol) / DC Output Chain (+ Rail)</text>
   
-  <circle cx="480" cy="140" r="15" fill="#2196f3"/>
-  <text x="480" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">1</text>
+  <!-- Step Numbers -->
+  <circle cx="480" cy="125" r="15" fill="#2196f3"/>
+  <text x="480" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">1</text>
   
-  <circle cx="570" cy="140" r="15" fill="#2196f3"/>
-  <text x="570" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">2</text>
+  <circle cx="570" cy="125" r="15" fill="#2196f3"/>
+  <text x="570" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">2</text>
   
-  <circle cx="680" cy="140" r="15" fill="#2196f3"/>
-  <text x="680" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">3</text>
+  <circle cx="680" cy="125" r="15" fill="#2196f3"/>
+  <text x="680" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">3</text>
   
-  <circle cx="780" cy="140" r="15" fill="#2196f3"/>
-  <text x="780" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">4</text>
+  <circle cx="800" cy="125" r="15" fill="#2196f3"/>
+  <text x="800" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">4</text>
   
-  <circle cx="880" cy="140" r="15" fill="#2196f3"/>
-  <text x="880" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">5</text>
+  <circle cx="900" cy="125" r="15" fill="#2196f3"/>
+  <text x="900" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">5</text>
   
-  <rect x="455" y="165" width="50" height="50" rx="5" fill="#d32f2f"/>
-  <text x="480" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">+V</text>
-  <text x="480" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">400V</text>
-  <text x="480" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">PSU Out</text>
+  <!-- Step 1: PSU Output -->
+  <rect x="455" y="150" width="50" height="50" rx="5" fill="#d32f2f"/>
+  <text x="480" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">+V</text>
+  <text x="480" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">400V</text>
+  <text x="480" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">PSU Out</text>
   
-  <rect x="535" y="165" width="70" height="50" rx="5" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2"/>
-  <text x="570" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333" font-weight="bold">Sperrdiode</text>
-  <text x="570" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">MDK-55</text>
-  <text x="570" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#999">55A 1600V</text>
-  <polygon points="545,245 595,245 570,265" fill="none" stroke="#d32f2f" stroke-width="2"/>
-  <line x1="545" y1="265" x2="595" y2="265" stroke="#d32f2f" stroke-width="2"/>
-  <text x="570" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#d32f2f">Anti-Backfeed</text>
+  <!-- Step 2: Blocking Diode -->
+  <rect x="535" y="150" width="70" height="50" rx="5" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2"/>
+  <text x="570" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333" font-weight="bold">Sperrdiode</text>
+  <text x="570" y="181" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">MDK-55</text>
+  <text x="570" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#999">55A 1600V</text>
+  <polygon points="545,230 595,230 570,250" fill="none" stroke="#d32f2f" stroke-width="2"/>
+  <line x1="545" y1="250" x2="595" y2="250" stroke="#d32f2f" stroke-width="2"/>
+  <text x="570" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#d32f2f">Anti-Backfeed</text>
   
-  <rect x="640" y="165" width="80" height="50" rx="5" fill="#fff" stroke="#607d8b" stroke-width="2"/>
-  <circle cx="680" cy="190" r="18" fill="#fff" stroke="#607d8b" stroke-width="2"/>
-  <text x="680" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">V</text>
-  <text x="680" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">0-500V</text>
-  <text x="680" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Voltmeter</text>
-  <text x="680" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#607d8b">(parallel)</text>
+  <!-- Step 3: Voltmeter (PARALLEL - needs + and - connections) -->
+  <rect x="630" y="150" width="100" height="90" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <circle cx="680" cy="175" r="18" fill="#fff" stroke="#607d8b" stroke-width="2"/>
+  <text x="680" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">V</text>
+  <text x="680" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">0-500V</text>
+  <text x="680" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Voltmeter</text>
+  <text x="680" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#4caf50" font-weight="bold">(PARALLEL)</text>
+  <text x="680" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#666">braucht + und -</text>
   
-  <rect x="740" y="165" width="80" height="50" rx="5" fill="#fff" stroke="#607d8b" stroke-width="2"/>
-  <circle cx="780" cy="190" r="18" fill="#fff" stroke="#607d8b" stroke-width="2"/>
-  <text x="780" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">A</text>
-  <text x="780" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">0-10A</text>
-  <text x="780" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Amperemeter</text>
-  <text x="780" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#607d8b">(in Reihe/series)</text>
+  <!-- Voltmeter parallel connection indicators -->
+  <rect x="640" y="200" width="15" height="10" rx="2" fill="#d32f2f"/>
+  <text x="648" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white">+</text>
+  <rect x="705" y="200" width="15" height="10" rx="2" fill="#212121"/>
+  <text x="713" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white">-</text>
   
-  <rect x="845" y="165" width="70" height="50" rx="5" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
-  <text x="880" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333" font-weight="bold">Sicherung</text>
-  <text x="880" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">DC Fuse</text>
-  <text x="880" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#999">10A 500V</text>
-  <text x="880" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#4caf50">Schutz/Protection</text>
+  <!-- Step 4: Amperemeter (IN SERIES) -->
+  <rect x="755" y="150" width="90" height="70" rx="5" fill="#fff" stroke="#607d8b" stroke-width="2"/>
+  <circle cx="800" cy="175" r="18" fill="#fff" stroke="#607d8b" stroke-width="2"/>
+  <text x="800" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">A</text>
+  <text x="800" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">0-10A</text>
+  <text x="800" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Amperemeter</text>
+  <text x="800" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#607d8b">(in Reihe/series)</text>
   
-  <line x1="335" y1="188" x2="455" y2="188" stroke="#d32f2f" stroke-width="4"/>
-  <line x1="505" y1="190" x2="535" y2="190" stroke="#d32f2f" stroke-width="4"/>
-  <line x1="605" y1="190" x2="640" y2="190" stroke="#d32f2f" stroke-width="4"/>
-  <line x1="720" y1="190" x2="740" y2="190" stroke="#d32f2f" stroke-width="4"/>
-  <line x1="820" y1="190" x2="845" y2="190" stroke="#d32f2f" stroke-width="4"/>
+  <!-- Step 5: DC Fuse -->
+  <rect x="860" y="150" width="70" height="70" rx="5" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <text x="895" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333" font-weight="bold">Sicherung</text>
+  <text x="895" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">DC Fuse</text>
+  <text x="895" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#999">10A 500V</text>
+  <text x="895" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#4caf50">Schutz/Protection</text>
   
-  <rect x="920" y="120" width="60" height="130" rx="8" fill="#4caf50" filter="url(#boxShadow)"/>
-  <text x="950" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">MC4</text>
-  <text x="950" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Buchse</text>
+  <!-- Main positive rail (red lines) -->
+  <line x1="335" y1="188" x2="455" y2="175" stroke="#d32f2f" stroke-width="4"/>
+  <line x1="505" y1="175" x2="535" y2="175" stroke="#d32f2f" stroke-width="4"/>
+  <line x1="605" y1="175" x2="755" y2="175" stroke="#d32f2f" stroke-width="4"/>
+  <line x1="845" y1="175" x2="860" y2="175" stroke="#d32f2f" stroke-width="4"/>
+  <line x1="930" y1="175" x2="950" y2="175" stroke="#d32f2f" stroke-width="4"/>
   
-  <rect x="930" y="175" width="40" height="25" rx="3" fill="#d32f2f"/>
-  <text x="950" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">+</text>
+  <!-- Voltmeter parallel tap from + rail -->
+  <line x1="648" y1="175" x2="648" y2="200" stroke="#d32f2f" stroke-width="2"/>
   
-  <rect x="930" y="210" width="40" height="25" rx="3" fill="#212121"/>
-  <text x="950" y="227" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">-</text>
+  <!-- MC4 Output -->
+  <rect x="940" y="145" width="45" height="130" rx="8" fill="#4caf50" filter="url(#boxShadow)"/>
+  <text x="962" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">MC4</text>
+  <text x="962" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Buchse</text>
   
-  <line x1="915" y1="190" x2="930" y2="188" stroke="#d32f2f" stroke-width="4"/>
+  <rect x="947" y="190" width="30" height="20" rx="3" fill="#d32f2f"/>
+  <text x="962" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">+</text>
   
-  <rect x="220" y="310" width="760" height="60" rx="5" fill="#f5f5f5" stroke="#212121" stroke-width="1" stroke-dasharray="5,5"/>
-  <text x="600" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">Minus-Pol / Negative Rail (-V)</text>
-  <text x="600" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Direkt vom Netzteil zur MC4-Buchse / Direct from PSU to MC4 connector</text>
+  <rect x="947" y="220" width="30" height="20" rx="3" fill="#212121"/>
+  <text x="962" y="234" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">-</text>
   
-  <line x1="352" y1="200" x2="352" y2="310" stroke="#212121" stroke-width="4"/>
-  <line x1="352" y1="340" x2="950" y2="340" stroke="#212121" stroke-width="4"/>
-  <line x1="950" y1="340" x2="950" y2="235" stroke="#212121" stroke-width="4"/>
+  <!-- Negative Rail Section -->
+  <rect x="220" y="330" width="765" height="55" rx="5" fill="#f5f5f5" stroke="#212121" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="600" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">Minus-Pol / Negative Rail (-V)</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Direkt vom Netzteil zur MC4-Buchse / Direct from PSU to MC4 connector</text>
   
-  <rect x="440" y="380" width="340" height="130" rx="10" fill="#fff9c4" stroke="#fbc02d" stroke-width="2" filter="url(#boxShadow)"/>
-  <text x="610" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f57f17">Steuerung / Control (CN2)</text>
+  <!-- Negative rail main line -->
+  <line x1="352" y1="200" x2="352" y2="357" stroke="#212121" stroke-width="4"/>
+  <line x1="352" y1="357" x2="962" y2="357" stroke="#212121" stroke-width="4"/>
+  <line x1="962" y1="357" x2="962" y2="240" stroke="#212121" stroke-width="4"/>
   
-  <rect x="460" y="420" width="120" height="70" rx="5" fill="#fff" stroke="#fbc02d" stroke-width="2"/>
-  <text x="520" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">Potentiometer</text>
-  <text x="520" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">0-10V Modul</text>
-  <text x="520" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#999">Spannungsregelung</text>
+  <!-- Voltmeter tap to negative rail -->
+  <line x1="713" y1="210" x2="713" y2="330" stroke="#212121" stroke-width="2" stroke-dasharray="3,3"/>
+  <circle cx="713" cy="357" r="4" fill="#212121"/>
   
-  <rect x="600" y="415" width="160" height="80" rx="5" fill="#fff" stroke="#fbc02d" stroke-width="2"/>
-  <text x="680" y="433" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333" font-weight="bold">CN2 Pinbelegung</text>
-  <text x="680" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Pin 1: +12V (Modul +)</text>
-  <text x="680" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Pin 2: -12V (Modul -)</text>
-  <text x="680" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Pin 5: V_ADJ (Signal +)</text>
-  <text x="680" y="484" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Pin 6: -V_ADJ (Signal -)</text>
+  <!-- Control Section -->
+  <rect x="440" y="400" width="340" height="130" rx="10" fill="#fff9c4" stroke="#fbc02d" stroke-width="2" filter="url(#boxShadow)"/>
+  <text x="610" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f57f17">Steuerung / Control (CN2)</text>
   
+  <rect x="460" y="440" width="120" height="70" rx="5" fill="#fff" stroke="#fbc02d" stroke-width="2"/>
+  <text x="520" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">Potentiometer</text>
+  <text x="520" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">0-10V Modul</text>
+  <text x="520" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#999">Stromregelung</text>
+  
+  <rect x="600" y="435" width="160" height="80" rx="5" fill="#fff" stroke="#fbc02d" stroke-width="2"/>
+  <text x="680" y="453" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333" font-weight="bold">CN2 Pinbelegung</text>
+  <text x="680" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Pin 1: +12V (Modul +)</text>
+  <text x="680" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Pin 2: -12V (Modul -)</text>
+  <text x="680" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Pin 5: V_ADJ (Signal +)</text>
+  <text x="680" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Pin 6: -V_ADJ (Signal -)</text>
+  
+  <!-- Control wire from CN2 -->
   <line x1="395" y1="150" x2="440" y2="150" stroke="#fbc02d" stroke-width="2" stroke-dasharray="5,3"/>
-  <line x1="440" y1="150" x2="440" y2="380" stroke="#fbc02d" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="440" y1="150" x2="440" y2="400" stroke="#fbc02d" stroke-width="2" stroke-dasharray="5,3"/>
   
-  <rect x="20" y="530" width="960" height="110" rx="8" fill="#fff" stroke="#ccc" stroke-width="1"/>
-  <text x="500" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Legende / Legend</text>
+  <!-- Legend -->
+  <rect x="20" y="550" width="960" height="140" rx="8" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="500" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Legende / Legend</text>
   
-  <line x1="50" y1="580" x2="100" y2="580" stroke="#d32f2f" stroke-width="4"/>
-  <text x="110" y="585" font-family="Arial, sans-serif" font-size="10" fill="#333">Plus-Pol / Positive (+) - 6mm Solarkabel</text>
+  <line x1="50" y1="605" x2="100" y2="605" stroke="#d32f2f" stroke-width="4"/>
+  <text x="110" y="610" font-family="Arial, sans-serif" font-size="10" fill="#333">Plus-Pol / Positive (+) - 6mm Solarkabel</text>
   
-  <line x1="350" y1="580" x2="400" y2="580" stroke="#212121" stroke-width="4"/>
-  <text x="410" y="585" font-family="Arial, sans-serif" font-size="10" fill="#333">Minus-Pol / Negative (-) - 6mm Solarkabel</text>
+  <line x1="400" y1="605" x2="450" y2="605" stroke="#212121" stroke-width="4"/>
+  <text x="460" y="610" font-family="Arial, sans-serif" font-size="10" fill="#333">Minus-Pol / Negative (-) - 6mm Solarkabel</text>
   
-  <line x1="650" y1="580" x2="700" y2="580" stroke="#fbc02d" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="710" y="585" font-family="Arial, sans-serif" font-size="10" fill="#333">Steuerleitung / Control wire</text>
+  <line x1="700" y1="605" x2="750" y2="605" stroke="#fbc02d" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="760" y="610" font-family="Arial, sans-serif" font-size="10" fill="#333">Steuerleitung / Control</text>
   
-  <rect x="50" y="600" width="15" height="15" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1"/>
-  <text x="75" y="612" font-family="Arial, sans-serif" font-size="10" fill="#333">Sperrdiode MUSS als erstes nach dem Netzteil! / Blocking diode MUST be first after PSU!</text>
+  <rect x="50" y="630" width="15" height="15" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
+  <text x="75" y="642" font-family="Arial, sans-serif" font-size="10" fill="#333">Voltmeter = PARALLEL (braucht + UND - Anschluss)</text>
   
-  <rect x="550" y="600" width="15" height="15" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
-  <text x="575" y="612" font-family="Arial, sans-serif" font-size="10" fill="#333">Sicherung dient als Lasttrennschalter / Fuse serves as load disconnector</text>
+  <rect x="450" y="630" width="15" height="15" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1"/>
+  <text x="475" y="642" font-family="Arial, sans-serif" font-size="10" fill="#333">Sperrdiode MUSS als erstes nach dem Netzteil!</text>
+  
+  <rect x="50" y="660" width="15" height="15" fill="#fff" stroke="#607d8b" stroke-width="1"/>
+  <text x="75" y="672" font-family="Arial, sans-serif" font-size="10" fill="#333">Amperemeter = IN REIHE (nur + Leitung durchfuehren)</text>
 </svg>

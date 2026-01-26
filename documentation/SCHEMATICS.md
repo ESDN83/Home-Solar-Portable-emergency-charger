@@ -152,11 +152,18 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 
 ### Spannungseinstellung / Voltage Adjustment
 
-| Poti-Stellung | Steuerspannung | Ausgangsspannung | Ladestrom (ca.) |
-|---------------|----------------|------------------|-----------------|
-| Minimum | 0V | ~320V DC | 0A |
-| Mitte | 5V | ~360V DC | ~4A |
-| Maximum | 10V | ~400V DC | 7.5A |
+> ⚠️ **Constant Current Mode (CC)**: Das Netzteil ist auf konstanten Strom konfiguriert (CN1).
+> Die Spannung variiert je nach Last!
+
+| Poti-Stellung | Steuerspannung | Ohne Last | Mit Last | Ladestrom (ca.) |
+|---------------|----------------|-----------|----------|-----------------|
+| Minimum | 0V | ~350V DC | - | 0A |
+| Mitte | 5V | ~350V DC | ~380V DC | ~4A |
+| Maximum | 10V | ~350V DC | ~400V DC | 7.5A |
+
+**Erklärung / Explanation:**
+- **Ohne Last (No Load)**: Spannung bleibt bei ~350V (Leerlauf)
+- **Mit Last (With Load)**: Spannung steigt auf bis zu 400V (Constant Current Regelung)
 
 ---
 
