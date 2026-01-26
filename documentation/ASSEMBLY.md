@@ -69,7 +69,7 @@ MeanWell (+) ➔ Sperrdiode (MDK-55) ➔ Voltmeter ➔ Amperemeter ➔ DC-Sicher
 
 ## 🎛️ Schritt 5: Steuerung / Step 5: Control
 
-Das Potentiometer-Modul wird mit dem 8-poligen Sync-Kabel verbunden. in CN2 -> https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/SCHEMATICS.md#%EF%B8%8F-steuerung-cn2-port
+Das Potentiometer-Modul wird mit dem 8-poligen Sync-Kabel verbunden an CN2 -> https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/SCHEMATICS.md#%EF%B8%8F-steuerung-cn2-port
 
 1. **Pin 1 (+12V)** an Moduleingang (+).
 2. **Pin 2 (-12V)** an Moduleingang (-).
