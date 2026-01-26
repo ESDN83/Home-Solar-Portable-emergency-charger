@@ -1,4 +1,6 @@
 *.url
+teile.xlsx
+*.xlsx
 .vscode/
 .DS_Store
 Thumbs.db
