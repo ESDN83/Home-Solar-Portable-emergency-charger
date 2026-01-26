@@ -67,11 +67,21 @@
 
 Alle STL-Dateien sind im Ordner [`3d_files/`](3d_files/) verfügbar. Diese dienen zur stabilen Montage der Komponenten in der Alubox.
 
-### 1. DIN Rail Mount - Netzteil-Halterung
- [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/DIN_RAIL_Mount_lying.stl)
+### 1. DIN Rail Mount - Hutschiene für Sicherungen
+🔗 [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/DIN_RAIL_Mount_lying.stl)
+- **Beschreibung**: Halterung für die beiden Sicherungsautomaten (DC-Sicherung und FI/LS).
 
 ### 2. CEE Connector Mount - CEE-Stecker Halterung
- [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Solar-Box-CEE-Stecker_v3.stl)
+🔗 [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Solar-Box-CEE-Stecker_v3.stl)
+- **Beschreibung**: Halterung für den CEE-Eingangsstecker am Alugehäuse.
+
+### 3. Solar Connector Mount - MC4 Halterung
+🔗 [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Solar-Box-Solar.Stecker_V2.stl)
+- **Beschreibung**: Halterung für die MC4-Ausgangsbuchsen.
+
+### 4. Deckplatte - Abdeckung
+🔗 [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Deckplatte_Solar-charge.stl)
+- **Beschreibung**: Obere Abdeckplatte für die interne Montageeinheit.
 
 ---
 
