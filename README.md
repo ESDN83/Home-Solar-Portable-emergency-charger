@@ -5,7 +5,7 @@
 ### Notstrom-Ladegerät für PV-Heimspeicher mittels Generator
 ### Emergency Charger for PV Home Battery Systems using Generator
 
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Language: DE/EN](https://img.shields.io/badge/Language-DE%20%7C%20EN-blue.svg)](#)
 [![Project Type: DIY](https://img.shields.io/badge/Project-DIY-orange.svg)](#)
 
@@ -192,7 +192,7 @@ Dieses Projekt basiert auf den Community-Diskussionen im Photovoltaikforum und d
 This project is based on community discussions in the Photovoltaikforum and the summary "Notstrom Zusammenfassung V3.pdf" by forum members.
 
 - 📖 **Forum Thread**: [Notstrom über Generator bei EFH mit E3/DC und Wärmepumpe](https://www.photovoltaikforum.com/thread/163745-notstrom-%C3%BCber-generator-bei-efh-mit-e3-dc-und-w%C3%A4rmepumpe/?pageNo=1)
-- 📄 **Original PDF**: "Notstrom Zusammenfassung V3.pdf" (verfügbar im Forum / available in forum)
+- 📄 **Original PDF**: [Notstrom Zusammenfassung V3.pdf](https://www.photovoltaikforum.com/thread/163745-notstrom-%C3%BCber-generator-bei-efh-mit-e3-dc-und-w%C3%A4rmepumpe/?postID=2635713#post2635713) - Download im Forum verfügbar / Download available in forum
 - 👥 **Credits**: Arno Waldmann, Roland B., und alle Forumsteilnehmer / and all forum participants
 
 ---
@@ -201,20 +201,21 @@ This project is based on community discussions in the Photovoltaikforum and the 
 
 <div align="center">
 
-[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-Dieses Werk ist lizenziert unter einer [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+Dieses Werk ist lizenziert unter einer [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
 **Das bedeutet / This means:**
 - ✅ Teilen / Share — copy and redistribute
 - ✅ Anpassen / Adapt — remix, transform, build upon
 - ⚠️ Namensnennung / Attribution required
 - ⚠️ Weitergabe unter gleichen Bedingungen / ShareAlike
+- 🚫 **KEINE kommerzielle Nutzung / NO commercial use**
 
 </div>
 
