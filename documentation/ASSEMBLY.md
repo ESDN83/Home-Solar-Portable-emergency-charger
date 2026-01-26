@@ -69,21 +69,22 @@ MeanWell (+) ➔ Sperrdiode (MDK-55) ➔ Voltmeter ➔ Amperemeter ➔ DC-Sicher
 
 ## 🎛️ Schritt 5: Steuerung / Step 5: Control
 
-Das Potentiometer-Modul wird mit dem 8-poligen Sync-Kabel verbunden.
+Das Potentiometer-Modul wird mit dem 8-poligen Sync-Kabel verbunden. in CN2 -> https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/SCHEMATICS.md#%EF%B8%8F-steuerung-cn2-port
 
-1. **Pin 8 (+12V)** an Moduleingang (+).
-2. **Pin 6 (V_ADJ)** an Modulausgang (Signal).
-3. **Pin 1-5 (GND)** an Modul (GND).
+1. **Pin 1 (+12V)** an Moduleingang (+).
+2. **Pin 2 (-12V)** an Moduleingang (-).
+3. **Pin 5 (V_ADJ)** an Modulausgang (Signal).
+4. **Pin 6 (-V_ADJ )** an Modulausgang (Signal -).
 
-Damit lässt sich die Ladespannung präzise zwischen ca. 200V und 400V regeln.
+Damit lässt sich der Ladestrom regeln.
 
 ---
 
 ## 🧪 Schritt 6: Test & Inbetriebnahme / Step 6: Testing
 
 1. **Sichtprüfung**: Alle Kontakte fest? Keine Kurzschlüsse am Alugehäuse?
-2. **Leerlauftest**: Generator an -> CEE einstecken -> Spannung am Potentiometer regeln.
-3. **Anzeige**: Prüfen, ob das Voltmeter die korrekte Spannung anzeigt.
+2. **Leerlauftest**: Generator an -> CEE einstecken -> Strom am Potentiometer regeln.
+3. **Anzeige**: Prüfen, ob das Voltmeter/Ampermeter die korrekte Spannung/Strom anzeigt.
 4. **Lasttest**: Erst wenn alles stabil ist, an den Wechselrichter anschließen.
 
 ---
