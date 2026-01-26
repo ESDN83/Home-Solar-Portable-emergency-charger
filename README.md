@@ -9,7 +9,7 @@
 [![Language: DE/EN](https://img.shields.io/badge/Language-DE%20%7C%20EN-blue.svg)](#)
 [![Project Type: DIY](https://img.shields.io/badge/Project-DIY-orange.svg)](#)
 
-![Project Photos](documentation/images/20260119_091030.jpg)
+![Project Photos](documentation/images/20260126_002311.jpg)
 
 **[🇩🇪 Deutsch](#-deutsch)** | **[🇬🇧 English](#-english)**
 
