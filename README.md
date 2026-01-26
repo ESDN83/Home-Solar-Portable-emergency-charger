@@ -75,13 +75,13 @@ Das System **simuliert eine Solaranlage** und speist DC-Strom direkt in die MPPT
 | Komponente | Spezifikation | Preis (ca.) |
 |------------|---------------|-------------|
 | **MeanWell CSP-3000-400** | 400V DC, 7.5A, 3000W Schaltnetzteil | 350€ |
-| **Generator** | Min. 3kW (höher empfohlen) | variabel |
-| **Sperrdioden** | 1000V, 30A (parallel geschaltet) | 10€ |
-| **DC-Lasttrennschalter** | Hager SB432PV oder ähnlich | 50€ |
-| **MC4-Stecker/Buchsen** | Standard PV-Anschlüsse | 5€ |
-| **3D-gedrucktes Gehäuse** | STL-Dateien inkludiert | Materialkosten |
+| **Gehäuse** | Alubox Werkzeugkiste Riffelblech (25L) | 90€ |
+| **Sperrdiode** | Heschen MDK-55 (55A 1600V) | 11€ |
+| **Messgeräte** | Analoges Voltmeter & Amperemeter | 17€ |
+| **Sicherung** | 10A DC-Leistungsschutzschalter | 9€ |
+| **Steuerung** | 0-10V Potentiometer-Modul | 15€ |
 
-**Gesamtkosten**: ca. **450-550€** (ohne Generator)
+**Gesamtkosten**: ca. **550-600€** (ohne Generator)
 
 ### 📖 Dokumentation
 
@@ -132,13 +132,13 @@ The system **simulates a solar array** and feeds DC power directly into the MPPT
 | Component | Specification | Price (approx.) |
 |-----------|---------------|-----------------|
 | **MeanWell CSP-3000-400** | 400V DC, 7.5A, 3000W Power Supply | 350€ |
-| **Generator** | Min. 3kW (higher recommended) | varies |
-| **Blocking Diodes** | 1000V, 30A (paralleled) | 10€ |
-| **DC Disconnect Switch** | Hager SB432PV or similar | 50€ |
-| **MC4 Connectors** | Standard PV connectors | 5€ |
-| **3D-printed Housing** | STL files included | Material costs |
+| **Housing** | Aluminum Checker Plate Tool Box (25L) | 90€ |
+| **Blocking Diode** | Heschen MDK-55 (55A 1600V) | 11€ |
+| **Indicators** | Analog Voltmeter & Ammeter | 17€ |
+| **Protection** | 10A DC Miniature Circuit Breaker | 9€ |
+| **Control** | 0-10V Potentiometer Module | 15€ |
 
-**Total Cost**: approx. **450-550€** (excluding generator)
+**Total Cost**: approx. **550-600€** (excluding generator)
 
 ### 📖 Documentation
 
