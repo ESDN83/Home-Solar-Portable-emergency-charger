@@ -96,20 +96,62 @@
 
 ## 🖨️ 3D-Druck Teile / 3D Printed Parts
 
-Alle STL-Dateien sind im Ordner [`3d_files/`](3d_files/) verfügbar:
+Alle STL-Dateien sind im Ordner [`3d_files/`](3d_files/) verfügbar.
 
-| Datei | Beschreibung | Material | Druckzeit |
-|-------|--------------|----------|-----------|
-| [`DIN_RAIL_Mount_lying.stl`](3d_files/DIN_RAIL_Mount_lying.stl) | Halterung für MeanWell Netzteil | PETG/ABS | ~2h |
-| [`Solar-Box-CEE-Stecker_v3.stl`](3d_files/Solar-Box-CEE-Stecker_v3.stl) | Halterung für CEE-Eingangsstecker | PETG/ABS | ~3h |
-| [`Solar-Box-Solar.Stecker_V2.stl`](3d_files/Solar-Box-Solar.Stecker_V2.stl) | Halterung für MC4-Ausgangsbuchsen | PETG/ABS | ~2h |
-| [`Deckplatte_Solar-charge.stl`](3d_files/Deckplatte_Solar-charge.stl) | Abdeckplatte | PETG/ABS | ~4h |
+> 💡 **Tipp**: Klicke auf die GitHub-Links um eine interaktive 3D-Vorschau der Modelle zu sehen!
 
-**Druckeinstellungen:**
-- Layer Height: 0.2mm
-- Infill: 20-30%
-- Material: PETG oder ABS (hitzebeständig!)
-- Supports: Ja, wo nötig
+### 1. DIN Rail Mount - Netzteil-Halterung
+
+📁 **Download**: [`DIN_RAIL_Mount_lying.stl`](3d_files/DIN_RAIL_Mount_lying.stl) (14 KB)  
+🔗 **3D-Vorschau**: [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/DIN_RAIL_Mount_lying.stl)
+
+- **Beschreibung**: Halterung für MeanWell CSP-3000-400 Netzteil zur Montage auf DIN-Schiene
+- **Material**: PETG/ABS (hitzebeständig!)
+- **Druckzeit**: ~2 Stunden
+
+---
+
+### 2. CEE Connector Mount - CEE-Stecker Halterung
+
+📁 **Download**: [`Solar-Box-CEE-Stecker_v3.stl`](3d_files/Solar-Box-CEE-Stecker_v3.stl) (102 KB)  
+🔗 **3D-Vorschau**: [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Solar-Box-CEE-Stecker_v3.stl)
+
+- **Beschreibung**: Halterung für CEE 16A Eingangsstecker am Gehäuse
+- **Material**: PETG/ABS
+- **Druckzeit**: ~3 Stunden
+
+---
+
+### 3. MC4 Connector Mount - MC4-Buchsen Halterung
+
+📁 **Download**: [`Solar-Box-Solar.Stecker_V2.stl`](3d_files/Solar-Box-Solar.Stecker_V2.stl) (79 KB)  
+🔗 **3D-Vorschau**: [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Solar-Box-Solar.Stecker_V2.stl)
+
+- **Beschreibung**: Halterung für MC4 Ausgangsbuchsen (+/-)
+- **Material**: PETG/ABS
+- **Druckzeit**: ~2 Stunden
+
+---
+
+### 4. Top Cover Plate - Deckplatte
+
+📁 **Download**: [`Deckplatte_Solar-charge.stl`](3d_files/Deckplatte_Solar-charge.stl) (107 KB)  
+🔗 **3D-Vorschau**: [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Deckplatte_Solar-charge.stl)
+
+- **Beschreibung**: Abdeckplatte für die Oberseite der Box
+- **Material**: PETG/ABS
+- **Druckzeit**: ~4 Stunden
+
+---
+
+### Druckeinstellungen / Print Settings
+
+**Empfohlene Einstellungen:**
+- **Layer Height**: 0.2mm
+- **Infill**: 20-30%
+- **Material**: PETG oder ABS (hitzebeständig!)
+- **Supports**: Ja, wo nötig
+- **Build Plate Adhesion**: Brim empfohlen
 
 ---
 
