@@ -76,7 +76,9 @@ Bitte beachten Sie das offizielle Handbuch für die exakte Pinbelegung. Hier ist
 - **Pin 6 (V_ADJ)**: Ausgang des Potentiometers (Steuerspannung 0-10V).
 - **Pin 1-5 (GND)**: Gemeinsame Masse.
 
-> 📷 **Bildhinweis**: Ein Screenshot der CN2-Belegung aus dem Datenblatt sollte hier eingefügt werden.
+> 📷 <img width="1066" height="436" alt="grafik" src="https://github.com/user-attachments/assets/46e13910-a17f-4f5d-b26e-490be6be1b89" />
+https://www.meanwell.com/Upload/PDF/CSP-3000/CSP-3000-SPEC.PDF
+> 
 
 ---
 
