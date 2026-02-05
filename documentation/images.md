@@ -1,4 +1,4 @@
-![20260126_002311.jpg](documentation/images/20260126_002311.jpg)
+![20260126_002311.jpg](images/20260126_002311.jpg)
 ![20260119_091030.jpg](documentation/images/20260119_091030.jpg)
 ![20260119_091037.jpg](documentation/images/20260119_091037.jpg)
 ![20260119_091052.jpg](documentation/images/20260119_091052.jpg)
