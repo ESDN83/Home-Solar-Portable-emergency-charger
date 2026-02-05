@@ -84,7 +84,7 @@ Alle STL-Dateien sind im Ordner [`3d_files/`](3d_files/) verfügbar. Diese diene
 - **Beschreibung**: Obere Abdeckplatte für die interne Montageeinheit.
 
 ### 5. Heschen MDK55 Cap
-[Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Heschen%20MDK55%20Cap.stl)
+🔗 [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Heschen%20MDK55%20Cap.stl)
 - **Beschreibung**: Abdeckung für die Heschen Diode um Berührung zu verhindern.
 
 ---
