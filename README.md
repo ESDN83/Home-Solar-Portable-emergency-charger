@@ -8,6 +8,7 @@
 ### Emergency Charger for PV Home Battery Systems using Generator
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![GitHub Release](https://img.shields.io/github/v/release/ESDN83/Home-Solar-Portable-emergency-charger)](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/releases)
 [![Language: DE/EN](https://img.shields.io/badge/Language-DE%20%7C%20EN-blue.svg)](#)
 [![Project Type: DIY](https://img.shields.io/badge/Project-DIY-orange.svg)](#)
 
