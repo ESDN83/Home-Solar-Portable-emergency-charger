@@ -224,6 +224,18 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareA
 
 ---
 
+## 🔗 More Projects by ESDN83
+
+| Project | Description |
+|---------|-------------|
+| [HA_enoceanmqtt-addon-ui](https://github.com/ESDN83/HA_enoceanmqtt-addon-ui) | EnOcean MQTT Home Assistant add-on with Web UI — visual device wizard, 96+ EEP profiles, MQTT auto-discovery, Eltako actuator control |
+| [esp-ha-usb-gateway](https://github.com/ESDN83/esp-ha-usb-gateway) | ESP32-S3 USB-to-TCP bridge for Home Assistant — use Zigbee/EnOcean USB sticks over the network (ESPHome) |
+| [esp-cyberpower-ups](https://github.com/ESDN83/esp-cyberpower-ups) | ESP32-S3 CyberPower UPS monitor via USB HID — native ESPHome component, direct Home Assistant integration |
+| [heizung-vitoconnect](https://github.com/ESDN83/heizung-vitoconnect) | ESPHome Vitoconnect replacement for Viessmann heating (WT32-ETH01 + Optolink) with Home Assistant integration |
+| [HA-Blueprints](https://github.com/ESDN83/HA-Blueprints) | Home Assistant automation blueprints — EnOcean PTM 215Z dimming & color scenes via Zigbee2MQTT |
+
+---
+
 <div align="center">
 
 ### 🌟 Wenn dir dieses Projekt gefällt, gib ihm einen Star! / If you like this project, give it a star! 🌟
