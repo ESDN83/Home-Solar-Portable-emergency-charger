@@ -197,9 +197,13 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 |--------|----------|-----------|
 | 🔴 **Sperrdiode** | MUSS als erstes Bauteil nach dem Netzteil sitzen! | ⚠️ KRITISCH |
 | 🔴 **Verpolung** | Alle Anschlüsse doppelt prüfen vor Inbetriebnahme | ⚠️ KRITISCH |
+| 🔴 **Überspannung von der PV-Seite** | Box nur an Eingängen oder Strings verwenden, die nie über 500V DC liegen können (siehe Hinweis unten) | ⚠️ KRITISCH |
 | 🟠 **Lichtbogen** | Niemals unter Last stecken/trennen | WICHTIG |
 | 🟠 **Kurzschluss** | DC-Automat als Lasttrennschalter verwenden | WICHTIG |
 | 🟡 **Wärme** | Sperrdiode benötigt Kühlung (Metallgehäuse) | BEACHTEN |
+
+> ⚠️ **500V-Grenze / 500V limit:** Das Netzteil liefert höchstens 400V, von der PV-Seite kann aber mehr kommen. Voltmeter (0-500V) und DC-Automat (500V DC) sind nur bis 500V ausgelegt und liegen bei geschlossenem Automaten an der Spannung der MC4-Buchse. Liegt dort mehr als 500V an, können beide beschädigt werden, und der Automat trennt möglicherweise nicht mehr sicher. Auch die Leerlaufspannung (Voc) an kalten Tagen zählt. Wer höhere Spannungen hat, muss Automat und Voltmeter passend größer auslegen.
+> The PSU delivers at most 400V, but the PV side can supply more. The voltmeter (0-500V) and DC breaker (500V DC) are rated to 500V only and see the MC4 socket voltage when the breaker is closed. Above 500V both can be damaged and the breaker may no longer disconnect safely. Open-circuit voltage (Voc) on cold days counts too. For higher voltages, use a suitably rated breaker and voltmeter.
 
 ### Checkliste vor Inbetriebnahme / Pre-Operation Checklist
 
@@ -209,6 +213,7 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 - [ ] Plus und Minus laufen über je einen Pol des DC-Automaten
 - [ ] Durchgang von PE am CEE-Stecker zur Alubox gemessen
 - [ ] Keine blanken Leitungen oder Kurzschlussgefahr
+- [ ] Spannung an der MC4-Buchse bleibt immer unter 500V DC (auch Voc bei Kälte)
 - [ ] RCBO funktioniert (Testknopf drücken)
 - [ ] Voltmeter zeigt Spannung erst NACH Einschalten
 - [ ] Potentiometer auf Minimum vor dem Start

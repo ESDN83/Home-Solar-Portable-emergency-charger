@@ -164,6 +164,7 @@ The system **simulates a solar array** and feeds DC power directly into the MPPT
 
 **🇩🇪 Deutsch:**
 - ⚠️ Dieses Projekt arbeitet mit **bis zu 400V DC** - tödliche Spannung!
+- ⚠️ Voltmeter und DC-Automat sind nur bis **500V DC** ausgelegt: nicht an Eingängen oder Strings verwenden, die darüber liegen können (auch Voc bei Kälte)
 - ⚠️ Arbeiten an Hochspannungssystemen nur durch **Elektrofachkräfte**
 - ⚠️ Niemals unter Last stecken/trennen (Lichtbogengefahr!)
 - ⚠️ Generator nur im **Außenbereich** betreiben (Abgasgefahr!)
@@ -172,6 +173,7 @@ The system **simulates a solar array** and feeds DC power directly into the MPPT
 
 **🇬🇧 English:**
 - ⚠️ This project involves **up to 400V DC** - lethal voltage!
+- ⚠️ Voltmeter and DC breaker are rated to **500V DC** only: do not use on inputs or strings that can exceed this (including Voc in cold weather)
 - ⚠️ High voltage work only by **qualified electricians**
 - ⚠️ Never connect/disconnect under load (arc flash hazard!)
 - ⚠️ Generator operation **outdoors only** (exhaust hazard!)
