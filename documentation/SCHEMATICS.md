@@ -87,21 +87,31 @@ Die korrekte Reihenfolge ist **kritisch** für die Sicherheit! / The correct ord
 |-----|------------|---------------|----------|
 | 1️⃣ | **MeanWell CSP-3000-400 (+V)** | 400V DC, 7.5A | DC-Spannungsquelle |
 | 2️⃣ | **Sperrdiode (MDK-55)** | 55A 1600V | 🔴 Verhindert Rückstrom vom PV-System |
-| 3️⃣ | **Voltmeter** | 0-500V DC analog | Anzeige der Ausgangsspannung |
-| 4️⃣ | **Amperemeter** | 0-10A DC analog | Anzeige des Ladestroms |
-| 5️⃣ | **DC Sicherung** | 10A 500V DC | Überlast-/Kurzschlussschutz |
+| 3️⃣ | **Voltmeter** | 0-500V DC analog | Anzeige der Ausgangsspannung, **parallel** zwischen + und - (nicht in Reihe) |
+| 4️⃣ | **Amperemeter** | 0-10A DC analog | Anzeige des Ladestroms, **in Reihe** |
+| 5️⃣ | **DC-Automat, Pol 1** | 2-polig, C10, 500V DC | Überlast-/Kurzschlussschutz und Trennung des Plus-Pols |
 | 6️⃣ | **MC4 Buchse (+)** | Solar-Standard | Ausgang zum Wechselrichter |
 
 ### Minus-Pol (-V) / Negative Rail
 
 ```
-MeanWell (-V) ─────────────────────────────────> MC4 Buchse (-)
-              │                                        │
-              └──────── Direkt / Direct ───────────────┘
+MeanWell (-V) ──┬──> DC-Automat, Pol 2 ──> MC4 Buchse (-)
+                │
+                └──> Voltmeter (-)
 ```
 
-*Der Minus-Pol wird direkt vom Netzteil zur MC4-Buchse geführt - keine Unterbrechung!*  
-*The negative rail goes directly from PSU to MC4 connector - no interruption!*
+*Der Minus-Pol läuft über den zweiten Pol des DC-Automaten. So trennt der Automat Plus und Minus gemeinsam vom Wechselrichter.*  
+*The negative rail passes through the second pole of the DC breaker, so the breaker disconnects both positive and negative from the inverter.*
+
+### Erdung / Earthing
+
+Das Gehäuse des Netzteils ist mit der Alubox verschraubt und über FG mit PE verbunden. Damit liegt auch die Box auf PE.  
+The PSU case is screwed to the aluminium box and connected to PE via FG, which also puts the box on PE.
+
+### Sperrdiode / Blocking Diode
+
+Beim MDK-55 sind die beiden äußeren Klemmen belegt, die mittlere Klemme bleibt frei.  
+On the MDK-55 the two outer terminals are used, the middle terminal stays free.
 
 ### Verkabelungsspezifikationen / Wiring Specifications
 
@@ -190,6 +200,8 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 - [ ] Alle Schraubverbindungen fest angezogen
 - [ ] Kabelquerschnitte entsprechen den Spezifikationen
 - [ ] Sperrdiode richtig gepolt (Kathode Richtung MC4)
+- [ ] Plus und Minus laufen über je einen Pol des DC-Automaten
+- [ ] Durchgang von PE am CEE-Stecker zur Alubox gemessen
 - [ ] Keine blanken Leitungen oder Kurzschlussgefahr
 - [ ] RCBO funktioniert (Testknopf drücken)
 - [ ] Voltmeter zeigt Spannung erst NACH Einschalten
