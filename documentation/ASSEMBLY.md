@@ -79,6 +79,8 @@ Das Potentiometer-Modul wird mit dem 8-poligen Sync-Kabel verbunden an CN2 -> ht
 3. **Pin 5 (V_ADJ)** an Modulausgang (Signal).
 4. **Pin 6 (-V_ADJ )** an Modulausgang (Signal -).
 
+> 📏 **Vor dem Anschließen messen:** Bevor das Modul angeklemmt wird, das Netzteil einschalten und am Kabelende mit dem Multimeter (DC) messen: schwarze Messspitze an Pin 1 (GND), rote an Pin 2 (+12V). Die Anzeige muss ca. **+12V** zeigen. Bei negativem Wert ist die Belegung vertauscht. Das Modul erst danach bei ausgeschaltetem Netzteil anschließen.
+
 Damit lässt sich der Ladestrom regeln.
 
 ---

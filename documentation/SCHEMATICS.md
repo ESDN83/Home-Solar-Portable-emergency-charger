@@ -140,6 +140,9 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 > ⚠️ **Korrektur / Correction (2026-11-05):** Pin 1 und Pin 2 waren in dieser Doku bisher vertauscht. Wer nach der alten Version verdrahtet hat, sollte die Polarität am Poti-Modul prüfen.
 > Pin 1 and Pin 2 were previously swapped in this documentation. If you wired from the old version, check the polarity at the potentiometer module.
 
+> 📏 **Vor dem Anschließen messen / Measure before connecting:** Poti-Modul noch nicht anschließen. Netzteil einschalten und am Kabelende mit dem Multimeter (DC) messen: schwarze Messspitze an Pin 1 (GND), rote an Pin 2 (+12V). Die Anzeige muss ca. **+12V** zeigen. Bei negativem Wert ist die Belegung vertauscht. Erst danach das Modul bei ausgeschaltetem Netzteil anschließen.
+> Do not connect the potentiometer module yet. Power on the PSU and measure at the cable end with a multimeter (DC): black probe on pin 1 (GND), red probe on pin 2 (+12V). The reading must be about **+12V**. A negative reading means the wires are swapped. Connect the module only afterwards, with the PSU switched off.
+
 ### Schaltschema / Wiring Schematic
 
 ```
