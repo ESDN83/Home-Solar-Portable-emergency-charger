@@ -197,8 +197,8 @@
 
   <rect x="290" y="590" width="150" height="120" rx="5" fill="#fff" stroke="#fbc02d" stroke-width="2"/>
   <text x="365" y="606" class="sm mid" font-weight="bold">CN2 (MeanWell)</text>
-  <text x="300" y="628" class="sm">Pin 1  +12 V</text>
-  <text x="300" y="651" class="sm">Pin 2  -12 V (GND)</text>
+  <text x="300" y="628" class="sm">Pin 1  GND</text>
+  <text x="300" y="651" class="sm">Pin 2  +12 V</text>
   <text x="300" y="674" class="sm">Pin 5  V_ADJ</text>
   <text x="300" y="697" class="sm">Pin 6  -V_ADJ</text>
 
@@ -209,8 +209,8 @@
 
   <rect x="500" y="590" width="125" height="120" rx="5" fill="#fff" stroke="#fbc02d" stroke-width="2"/>
   <text x="562" y="606" class="sm mid" font-weight="bold">Poti-Modul 0-10 V</text>
-  <text x="510" y="628" class="sm">(+) Eingang</text>
-  <text x="510" y="651" class="sm">(-) Eingang</text>
+  <text x="510" y="628" class="sm">(-) Eingang</text>
+  <text x="510" y="651" class="sm">(+) Eingang</text>
   <text x="510" y="674" class="sm">Signal (+)</text>
   <text x="510" y="697" class="sm">Signal (-)</text>
 

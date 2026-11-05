@@ -74,8 +74,8 @@ Das Voltmeter wird parallel angeschlossen: (+) nach der Sperrdiode, (-) am Minus
 
 Das Potentiometer-Modul wird mit dem 8-poligen Sync-Kabel verbunden an CN2 -> https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/SCHEMATICS.md#%EF%B8%8F-steuerung-cn2-port
 
-1. **Pin 1 (+12V)** an Moduleingang (+).
-2. **Pin 2 (-12V)** an Moduleingang (-).
+1. **Pin 1 (GND)** an Moduleingang (-).
+2. **Pin 2 (+12V)** an Moduleingang (+).
 3. **Pin 5 (V_ADJ)** an Modulausgang (Signal).
 4. **Pin 6 (-V_ADJ )** an Modulausgang (Signal -).
 

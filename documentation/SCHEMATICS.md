@@ -132,10 +132,13 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 
 | Pin | Bezeichnung | Funktion | Verbindung |
 |-----|-------------|----------|------------|
-| **Pin 1** | +12V | Stromversorgung für Potentiometer | Modul (+) Eingang |
-| **Pin 2** | -12V (GND) | Masse für Potentiometer | Modul (-) Eingang |
+| **Pin 1** | 12V AUXG (GND) | Masse für Potentiometer | Modul (-) Eingang |
+| **Pin 2** | 12V AUX+ (+12V) | Stromversorgung für Potentiometer | Modul (+) Eingang |
 | **Pin 5** | V_ADJ | Steuerspannung 0-10V | Modul Signal Ausgang |
 | **Pin 6** | -V_ADJ | Signal Masse | Modul Signal (-) |
+
+> ⚠️ **Korrektur / Correction (2026-11-05):** Pin 1 und Pin 2 waren in dieser Doku bisher vertauscht. Wer nach der alten Version verdrahtet hat, sollte die Polarität am Poti-Modul prüfen.
+> Pin 1 and Pin 2 were previously swapped in this documentation. If you wired from the old version, check the polarity at the potentiometer module.
 
 ### Schaltschema / Wiring Schematic
 
@@ -144,9 +147,9 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 │   MeanWell      │           │  Potentiometer   │
 │   CN2 Port      │           │     Modul        │
 │                 │           │                  │
-│  Pin 1 (+12V) ──┼───────────┼── (+) Eingang    │
+│  Pin 1 (GND)  ──┼───────────┼── (-) Eingang    │
 │                 │           │                  │
-│  Pin 2 (-12V) ──┼───────────┼── (-) Eingang    │
+│  Pin 2 (+12V) ──┼───────────┼── (+) Eingang    │
 │                 │           │                  │
 │  Pin 5 (V_ADJ)──┼───────────┼── Signal (+)     │
 │                 │           │                  │
