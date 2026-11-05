@@ -164,7 +164,8 @@ The system **simulates a solar array** and feeds DC power directly into the MPPT
 
 **🇩🇪 Deutsch:**
 - ⚠️ Dieses Projekt arbeitet mit **bis zu 400V DC** - tödliche Spannung!
-- ⚠️ Parallel zum PV-String nur über **Splitter mit Diode** anschließen: Voltmeter und DC-Automat sind nur bis **500V DC** ausgelegt
+- ⚠️ Parallel zum PV-String nur über **Y-Stecker mit Diode** anschließen: Voltmeter und DC-Automat sind nur bis **500V DC** ausgelegt
+- ⚠️ Die Diode schützt nur die Box: **Rückstrom in den PV-String** vermeiden, wenn die Stringspannung unter der Box-Spannung liegt
 - ⚠️ Arbeiten an Hochspannungssystemen nur durch **Elektrofachkräfte**
 - ⚠️ Niemals unter Last stecken/trennen (Lichtbogengefahr!)
 - ⚠️ Generator nur im **Außenbereich** betreiben (Abgasgefahr!)
@@ -173,7 +174,8 @@ The system **simulates a solar array** and feeds DC power directly into the MPPT
 
 **🇬🇧 English:**
 - ⚠️ This project involves **up to 400V DC** - lethal voltage!
-- ⚠️ Connect in parallel with a PV string only through a **splitter with a diode**: the voltmeter and DC breaker are rated to **500V DC** only
+- ⚠️ Connect in parallel with a PV string only through a **Y plug with a diode**: the voltmeter and DC breaker are rated to **500V DC** only
+- ⚠️ The diode only protects the box: avoid **reverse current into the PV string** when the string voltage is below the box voltage
 - ⚠️ High voltage work only by **qualified electricians**
 - ⚠️ Never connect/disconnect under load (arc flash hazard!)
 - ⚠️ Generator operation **outdoors only** (exhaust hazard!)

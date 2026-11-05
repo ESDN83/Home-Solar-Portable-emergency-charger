@@ -36,6 +36,7 @@
 |------------|---------------|-------|------|
 | **Sperrdiode** | Heschen MDK-55 (55A 1600V) Antireverse-Gleichrichter | 10,89€ | [Amazon B0C33MKF6R](https://www.amazon.de/dp/B0C33MKF6R) |
 | **Sicherung** | 10A DC-Leistungsschutzschalter (2-polig, 500V) | 8,29€ | [Amazon B0DXKYR1FZ](https://www.amazon.de/dp/B0DXKYR1FZ) |
+| **Y-Stecker mit Diode** | MC4-Y-Stecker für den Parallelbetrieb zum PV-String, Diode auf der Plus-Seite vor dem Kabel zur Box. Für maximale Stringspannung und Strom auslegen | - | - |
 | **RCBO** | DIHOOL FI/LS Schutzschalter 20A 30mA (AC-Seite) | 19,88€ | [Amazon B0DZN5TVRW](https://www.amazon.de/dp/B0DZN5TVRW) |
 
 ---

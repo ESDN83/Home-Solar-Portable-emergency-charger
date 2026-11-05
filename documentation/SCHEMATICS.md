@@ -42,7 +42,9 @@ graph LR
 
     subgraph PV_Connection [PV Anschluss]
         Fuse --> MC4[MC4 Buchse]
-        MC4 --> WR[🏠 Wechselrichter<br/>MPPT Eingang]
+        MC4 --> YDiode[🔒 Y-Stecker<br/>Diode im Box-Zweig +]
+        String[☀️ PV-String] --> YDiode
+        YDiode --> WR[🏠 Wechselrichter<br/>MPPT Eingang]
     end
 
     Poti[🎛️ Potentiometer] -.->|CN2| MW
@@ -65,7 +67,7 @@ graph LR
 | 2️⃣ | CEE → RCBO | 230V AC | Schutz & Eingang |
 | 3️⃣ | MeanWell PSU | AC→DC | Wandlung auf 350-400V DC |
 | 4️⃣ | DC Kette | 350-400V DC | Schutz & Monitoring |
-| 5️⃣ | MC4 → MPPT | 350-400V DC | Ausgang zum Wechselrichter |
+| 5️⃣ | MC4 → Y-Stecker → MPPT | 350-400V DC | Ausgang zum Wechselrichter, parallel zum PV-String |
 
 ---
 
@@ -90,12 +92,13 @@ Die korrekte Reihenfolge ist **kritisch** für die Sicherheit! / The correct ord
 | 3️⃣ | **Voltmeter** | 0-500V DC analog | Anzeige der Ausgangsspannung, **parallel** zwischen + und - (nicht in Reihe) |
 | 4️⃣ | **Amperemeter** | 0-10A DC analog | Anzeige des Ladestroms, **in Reihe** |
 | 5️⃣ | **DC-Automat, Pol 1** | 2-polig, C10, 500V DC | Überlast-/Kurzschlussschutz und Trennung des Plus-Pols |
-| 6️⃣ | **MC4 Buchse (+)** | Solar-Standard | Ausgang zum Wechselrichter |
+| 6️⃣ | **MC4 Buchse (+)** | Solar-Standard | Ausgang der Box |
+| 7️⃣ | **Y-Stecker mit Diode (+)** | Für max. Stringspannung und Strom ausgelegt | Extern: Diode im Plus-Zweig vor dem Kabel zur Box, führt Box und PV-String zum MPPT-Eingang zusammen |
 
 ### Minus-Pol (-V) / Negative Rail
 
 ```
-MeanWell (-V) ──┬──> DC-Automat, Pol 2 ──> MC4 Buchse (-)
+MeanWell (-V) ──┬──> DC-Automat, Pol 2 ──> MC4 Buchse (-) ──> Y-Stecker (-, ohne Diode) ──> MPPT (-)
                 │
                 └──> Voltmeter (-)
 ```
@@ -197,13 +200,17 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 |--------|----------|-----------|
 | 🔴 **Sperrdiode** | MUSS als erstes Bauteil nach dem Netzteil sitzen! | ⚠️ KRITISCH |
 | 🔴 **Verpolung** | Alle Anschlüsse doppelt prüfen vor Inbetriebnahme | ⚠️ KRITISCH |
-| 🔴 **PV-Spannung an der Box** | Parallel zum PV-String nur über Splitter mit Diode anschließen (siehe Hinweis unten) | ⚠️ KRITISCH |
+| 🔴 **PV-Spannung an der Box** | Parallel zum PV-String nur über Y-Stecker mit Diode anschließen (siehe Hinweis unten) | ⚠️ KRITISCH |
+| 🔴 **Rückstrom in den PV-String** | Box nicht laufen lassen, wenn die Stringspannung unter der Box-Spannung liegt (siehe Hinweis unten) | ⚠️ KRITISCH |
 | 🟠 **Lichtbogen** | Niemals unter Last stecken/trennen | WICHTIG |
 | 🟠 **Kurzschluss** | DC-Automat als Lasttrennschalter verwenden | WICHTIG |
 | 🟡 **Wärme** | Sperrdiode benötigt Kühlung (Metallgehäuse) | BEACHTEN |
 
-> ⚠️ **Splitter mit Diode / Splitter with diode:** Parallel zum PV-String wird die Box über einen Splitter mit Diode angeschlossen. Richtig verdrahtet erreicht die PV-Spannung die Box dann nicht, Voltmeter (0-500V) und DC-Automat (500V DC) sehen nur die maximal 400V des Netzteils. Die 500V-Grenze wird nur relevant, wenn die Diode fehlt, defekt ist oder falsch sitzt und der String über 500V liegen kann (auch Voc bei Kälte). Zeigt das Voltmeter bei ausgeschaltetem Netzteil dauerhaft Spannung, kommt PV-Spannung in die Box: Automat öffnen und die Verdrahtung prüfen. Die Diode im Splitter muss für die maximale Stringspannung ausgelegt sein.
-> When connected in parallel with a PV string, the box goes through a splitter with a diode. Wired correctly, PV voltage does not reach the box, so the voltmeter (0-500V) and DC breaker (500V DC) only see the PSU's 400V maximum. The 500V limit only matters if the diode is missing, defective or misplaced and the string can exceed 500V (including Voc in cold weather). If the voltmeter keeps showing voltage with the PSU off, PV voltage is entering the box: open the breaker and check the wiring. The splitter diode must be rated for the maximum string voltage.
+> ⚠️ **Y-Stecker mit Diode / Y plug with diode:** Parallel zum PV-String wird die Box über einen Y-Stecker mit Diode angeschlossen, die Diode sitzt auf der Plus-Seite vor dem Kabel zur Box. Richtig verdrahtet erreicht die PV-Spannung die Box dann nicht, Voltmeter (0-500V) und DC-Automat (500V DC) sehen nur die maximal 400V des Netzteils. Die 500V-Grenze wird nur relevant, wenn die Diode fehlt, defekt ist oder falsch sitzt und der String über 500V liegen kann (auch Voc bei Kälte). Zeigt das Voltmeter bei ausgeschaltetem Netzteil dauerhaft Spannung, kommt PV-Spannung in die Box: Automat öffnen und die Verdrahtung prüfen. Die Diode im Y-Stecker muss für die maximale Stringspannung ausgelegt sein.
+> When connected in parallel with a PV string, the box goes through a Y plug with a diode on the positive side, ahead of the cable to the box. Wired correctly, PV voltage does not reach the box, so the voltmeter (0-500V) and DC breaker (500V DC) only see the PSU's 400V maximum. The 500V limit only matters if the diode is missing, defective or misplaced and the string can exceed 500V (including Voc in cold weather). If the voltmeter keeps showing voltage with the PSU off, PV voltage is entering the box: open the breaker and check the wiring. The diode in the Y plug must be rated for the maximum string voltage.
+
+> ⚠️ **Rückstrom in den PV-String / Reverse current into the PV string:** Die Diode im Box-Zweig schützt nur die Box, der String-Zweig selbst hat keine Diode. Liegt die Stringspannung unter der Box-Spannung (nachts, bei Schatten oder wenigen Modulen), kann Strom von der Box in die Module fließen. Das erwärmt die Module und geht der Ladung verloren. Abhilfe: String während des Betriebs abklemmen oder den String-Zweig ebenfalls mit einer Diode absichern.
+> The diode in the box branch only protects the box; the string branch has no diode of its own. If the string voltage is below the box voltage (at night, in shade or with few modules), current can flow from the box into the modules. This heats the modules and is lost for charging. Remedy: disconnect the string during operation, or add a diode to the string branch as well.
 
 ### Checkliste vor Inbetriebnahme / Pre-Operation Checklist
 
@@ -213,7 +220,8 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 - [ ] Plus und Minus laufen über je einen Pol des DC-Automaten
 - [ ] Durchgang von PE am CEE-Stecker zur Alubox gemessen
 - [ ] Keine blanken Leitungen oder Kurzschlussgefahr
-- [ ] Parallel zum PV-String nur über Splitter mit Diode angeschlossen
+- [ ] Parallel zum PV-String nur über Y-Stecker mit Diode angeschlossen (Diode auf der Plus-Seite vor dem Kabel zur Box)
+- [ ] Kein Rückstrom in den PV-String möglich (String abgeklemmt oder eigene Diode)
 - [ ] RCBO funktioniert (Testknopf drücken)
 - [ ] Voltmeter zeigt Spannung erst NACH Einschalten
 - [ ] Potentiometer auf Minimum vor dem Start

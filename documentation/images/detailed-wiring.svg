@@ -190,6 +190,27 @@
   <text x="1212" y="243" font-size="10" fill="#fff" class="mid">MPPT</text>
   <text x="1212" y="456" font-size="10" fill="#fff" class="mid">MPPT</text>
 
+  <!-- 7 Y CONNECTOR -->
+  <polygon points="1143,208 1143,232 1163,220" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2"/>
+  <line x1="1165" y1="207" x2="1165" y2="233" stroke="#d32f2f" stroke-width="3"/>
+  <path d="M 1173 220 V 165 H 1190" class="plus"/>
+  <circle cx="1173" cy="220" r="5" fill="#d32f2f"/>
+  <rect x="1190" y="150" width="62" height="28" rx="4" fill="#fff" stroke="#d32f2f" stroke-width="2"/>
+  <text x="1221" y="168" class="tiny mid" font-weight="bold">PV-String (+)</text>
+  <circle cx="1152" cy="262" r="13" class="badge"/>
+  <text x="1152" y="267" class="badge-t">7</text>
+  <text x="1076" y="294" class="tiny">Y-Stecker: Diode</text>
+  <text x="1076" y="307" class="tiny">vor Kabel zur Box</text>
+  <text x="1076" y="325" class="tiny">Y plug: diode in</text>
+  <text x="1076" y="338" class="tiny">box branch</text>
+  <path d="M 1173 470 V 525 H 1190" class="minus"/>
+  <circle cx="1173" cy="470" r="5" fill="#212121"/>
+  <rect x="1190" y="510" width="62" height="30" rx="4" fill="#fff" stroke="#212121" stroke-width="2"/>
+  <text x="1221" y="529" class="tiny mid" font-weight="bold">PV-String (-)</text>
+  <text x="1076" y="512" class="tiny">Y-Stecker (-)</text>
+  <text x="1076" y="525" class="tiny">ohne Diode</text>
+  <text x="1076" y="538" class="tiny">(no diode)</text>
+
   <!-- CONTROL -->
   <path d="M 385 530 V 590" class="ctl"/>
   <rect x="20" y="570" width="620" height="150" rx="10" fill="#fffde7" stroke="#fbc02d" stroke-width="2"/>

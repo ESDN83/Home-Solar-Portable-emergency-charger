@@ -62,6 +62,8 @@ MeanWell (-) ➔ DC-Automat Pol 2 ➔ MC4-Buchse (-)
 
 Das Voltmeter wird parallel angeschlossen: (+) nach der Sperrdiode, (-) am Minus-Pol vor dem DC-Automaten.
 
+Parallel zum PV-String wird die Box außerhalb des Gehäuses über einen **MC4-Y-Stecker mit Diode** an den MPPT-Eingang angeschlossen. Die Diode sitzt auf der Plus-Seite vor dem Kabel zur Box, die Minus-Seite hat keine Diode. Hinweis zum Rückstrom in den PV-String: siehe [Sicherheitshinweise](SCHEMATICS.md).
+
 1. **AC-Seite**: CEE-Anbaustecker -> FI/LS Schutzschalter (RCBO) -> MeanWell AC-Eingang.
 2. **DC-Seite**: 
    - Verwenden Sie **6mm² Solarkabel** für die Hauptleitung.
