@@ -197,13 +197,13 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 |--------|----------|-----------|
 | 🔴 **Sperrdiode** | MUSS als erstes Bauteil nach dem Netzteil sitzen! | ⚠️ KRITISCH |
 | 🔴 **Verpolung** | Alle Anschlüsse doppelt prüfen vor Inbetriebnahme | ⚠️ KRITISCH |
-| 🔴 **Überspannung von der PV-Seite** | Box nur an Eingängen oder Strings verwenden, die nie über 500V DC liegen können (siehe Hinweis unten) | ⚠️ KRITISCH |
+| 🔴 **PV-Spannung an der Box** | Parallel zum PV-String nur über Splitter mit Diode anschließen (siehe Hinweis unten) | ⚠️ KRITISCH |
 | 🟠 **Lichtbogen** | Niemals unter Last stecken/trennen | WICHTIG |
 | 🟠 **Kurzschluss** | DC-Automat als Lasttrennschalter verwenden | WICHTIG |
 | 🟡 **Wärme** | Sperrdiode benötigt Kühlung (Metallgehäuse) | BEACHTEN |
 
-> ⚠️ **500V-Grenze / 500V limit:** Das Netzteil liefert höchstens 400V, von der PV-Seite kann aber mehr kommen. Voltmeter (0-500V) und DC-Automat (500V DC) sind nur bis 500V ausgelegt und liegen bei geschlossenem Automaten an der Spannung der MC4-Buchse. Liegt dort mehr als 500V an, können beide beschädigt werden, und der Automat trennt möglicherweise nicht mehr sicher. Auch die Leerlaufspannung (Voc) an kalten Tagen zählt. Wer höhere Spannungen hat, muss Automat und Voltmeter passend größer auslegen.
-> The PSU delivers at most 400V, but the PV side can supply more. The voltmeter (0-500V) and DC breaker (500V DC) are rated to 500V only and see the MC4 socket voltage when the breaker is closed. Above 500V both can be damaged and the breaker may no longer disconnect safely. Open-circuit voltage (Voc) on cold days counts too. For higher voltages, use a suitably rated breaker and voltmeter.
+> ⚠️ **Splitter mit Diode / Splitter with diode:** Parallel zum PV-String wird die Box über einen Splitter mit Diode angeschlossen. Richtig verdrahtet erreicht die PV-Spannung die Box dann nicht, Voltmeter (0-500V) und DC-Automat (500V DC) sehen nur die maximal 400V des Netzteils. Die 500V-Grenze wird nur relevant, wenn die Diode fehlt, defekt ist oder falsch sitzt und der String über 500V liegen kann (auch Voc bei Kälte). Zeigt das Voltmeter bei ausgeschaltetem Netzteil dauerhaft Spannung, kommt PV-Spannung in die Box: Automat öffnen und die Verdrahtung prüfen. Die Diode im Splitter muss für die maximale Stringspannung ausgelegt sein.
+> When connected in parallel with a PV string, the box goes through a splitter with a diode. Wired correctly, PV voltage does not reach the box, so the voltmeter (0-500V) and DC breaker (500V DC) only see the PSU's 400V maximum. The 500V limit only matters if the diode is missing, defective or misplaced and the string can exceed 500V (including Voc in cold weather). If the voltmeter keeps showing voltage with the PSU off, PV voltage is entering the box: open the breaker and check the wiring. The splitter diode must be rated for the maximum string voltage.
 
 ### Checkliste vor Inbetriebnahme / Pre-Operation Checklist
 
@@ -213,7 +213,7 @@ Die Steuerung erfolgt über ein **0-10V Potentiometer-Modul**, welches an den CN
 - [ ] Plus und Minus laufen über je einen Pol des DC-Automaten
 - [ ] Durchgang von PE am CEE-Stecker zur Alubox gemessen
 - [ ] Keine blanken Leitungen oder Kurzschlussgefahr
-- [ ] Spannung an der MC4-Buchse bleibt immer unter 500V DC (auch Voc bei Kälte)
+- [ ] Parallel zum PV-String nur über Splitter mit Diode angeschlossen
 - [ ] RCBO funktioniert (Testknopf drücken)
 - [ ] Voltmeter zeigt Spannung erst NACH Einschalten
 - [ ] Potentiometer auf Minimum vor dem Start
