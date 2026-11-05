@@ -46,18 +46,21 @@ Die 3D-gedruckten Teile dienen zur stabilen Befestigung der Komponenten auf dem 
 ## ⚡ Schritt 3: Mechanische Montage / Step 3: Mechanical Assembly
 
 1. **Lochblech einpassen**: Das Alu-Lochblech dient als Montageplatte am Boden der Box.
-2. **Netzteil fixieren**: Das MeanWell Netzteil mit den 3D-Halterungen auf das Lochblech schrauben.
+2. **Netzteil fixieren**: Das MeanWell Netzteil mit den 3D-Halterungen auf das Lochblech schrauben. Das Netzteilgehäuse wird mit der Alubox verschraubt, damit die Box über FG auf PE liegt.
 3. **Sperrdiode montieren**: Die **MDK-55 Diode** muss fest auf einer metallischen Oberfläche (Kühlkörper oder Gehäusewand) montiert werden, da sie im Betrieb warm wird.
 
 ---
 
 ## 🔌 Schritt 4: Verkabelung / Step 4: Wiring
 
-Folgen Sie exakt dieser Reihenfolge für den Plus-Pol:
+Folgen Sie exakt dieser Reihenfolge für Plus- und Minus-Pol:
 
 ```
-MeanWell (+) ➔ Sperrdiode (MDK-55) ➔ Voltmeter ➔ Amperemeter ➔ DC-Sicherung ➔ MC4-Buchse (+)
+MeanWell (+) ➔ Sperrdiode (MDK-55) ➔ Amperemeter ➔ DC-Automat Pol 1 ➔ MC4-Buchse (+)
+MeanWell (-) ➔ DC-Automat Pol 2 ➔ MC4-Buchse (-)
 ```
+
+Das Voltmeter wird parallel angeschlossen: (+) nach der Sperrdiode, (-) am Minus-Pol vor dem DC-Automaten.
 
 1. **AC-Seite**: CEE-Anbaustecker -> FI/LS Schutzschalter (RCBO) -> MeanWell AC-Eingang.
 2. **DC-Seite**: 
