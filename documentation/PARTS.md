@@ -99,7 +99,7 @@ Forennutzer **[ttoommeekk](https://www.photovoltaikforum.com/core/user/216026-tt
 | **Heschen-Kappe V2** | Verbreiterte Kabel-Aussparungen, passt auch mit Schrumpfschlauch auf den Kabeln |
 | **Heschen-Kappe V3** | Kabel-Aussparungen weniger hoch, dadurch besserer Berührungsschutz |
 
-> 💡 Die Dateien (STL/STEP/3MF) liegen auf Thingiverse, da das Forum keine 3D-Dateien als Anhang erlaubt. Danke an ttoommeekk!
+> 💡 Die Druckdateien (STL/STEP/3MF) gibt es auf [Thingiverse (thing:7433689)](https://www.thingiverse.com/thing:7433689). Danke an ttoommeekk!
 
 ---
 
