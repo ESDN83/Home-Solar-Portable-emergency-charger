@@ -88,6 +88,20 @@ Alle STL-Dateien sind im Ordner [`3d_files/`](3d_files/) verfügbar. Diese diene
 🔗 [Auf GitHub ansehen](https://github.com/ESDN83/Home-Solar-Portable-emergency-charger/blob/main/documentation/3d_files/Heschen%20MDK55%20Cap.stl)
 - **Beschreibung**: Abdeckung für die Heschen Diode um Berührung zu verhindern.
 
+### 6. Community-Abdeckkappen (von ttoommeekk)
+🔗 [Auf Thingiverse ansehen (thing:7433689)](https://www.thingiverse.com/thing:7433689)
+
+Forennutzer **[ttoommeekk](https://www.photovoltaikforum.com/core/user/216026-ttoommeekk/)** hat im [Photovoltaikforum-Thread (#606)](https://www.photovoltaikforum.com/thread/163745-notstrom-%C3%BCber-generator-bei-efh-mit-e3-dc-und-w%C3%A4rmepumpe/?postID=4933007#post4933007) zusätzliche Berührungsschutz-Kappen erstellt und für diese Doku freigegeben:
+
+| Teil | Beschreibung |
+|------|--------------|
+| **Kappe Amperemeter** | Deckt die offenen Anschlusskontakte auf der Rückseite des Amperemeters ab |
+| **Kappe Voltmeter** | Deckt die offenen Anschlusskontakte auf der Rückseite des Voltmeters ab |
+| **Heschen-Kappe V2** | Verbreiterte Kabel-Aussparungen, passt auch mit Schrumpfschlauch auf den Kabeln |
+| **Heschen-Kappe V3** | Kabel-Aussparungen weniger hoch, dadurch besserer Berührungsschutz |
+
+> 💡 Die Druckdateien (STL/STEP/3MF) gibt es auf [Thingiverse (thing:7433689)](https://www.thingiverse.com/thing:7433689). Danke an ttoommeekk!
+
 ---
 
 ## 💰 Kostenzusammenfassung / Cost Summary
